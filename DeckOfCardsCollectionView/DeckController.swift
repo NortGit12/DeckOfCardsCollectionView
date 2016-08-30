@@ -19,7 +19,6 @@ class DeckController {
     let getCardsForDeckSuffixURLString = "draw/"
     static let deckIDKey = "deck_id"
     static let cardsKey = "cards"
-//    static let cardImageKey = "image"
     
     //==================================================
     // MARK: - Methods
@@ -69,11 +68,9 @@ class DeckController {
                 if let completion = completion {
                     
                     dispatch_async(dispatch_get_main_queue(), {
-                        
+                    
                         completion(deckID: newDeckID)
                     })
-                    
-//                    completion(deckID: newDeckID)
                 }
             }
         }
@@ -130,8 +127,6 @@ class DeckController {
                     
                     completion(cards: cardsArray)
                 })
-                
-//                completion(cards: cardsArray)
             }
         }
     }
